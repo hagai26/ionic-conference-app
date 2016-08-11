@@ -11,7 +11,8 @@ import { SignupPage } from '../signup/signup';
       <button ion-item (click)="close()">Documentation</button>
       <button ion-item (click)="close()">Showcase</button>
       <button ion-item (click)="close()">GitHub Repo</button>
-      <button ion-item (click)="pushSignupPage()">push Signup Page</button>
+      <button ion-item (click)="pushSignupPage()">push signup page</button>
+      <button ion-item (click)="pushSignupPageNoDismiss()">push signup page no dismiss</button>
     </ion-list>
   `
 })
@@ -27,6 +28,10 @@ class PopoverPage {
     this.viewCtrl.dismiss().then(() => {
       this.navCtrl.push(SignupPage);
     });
+  }
+
+  pushSignupPageNoDismiss() {
+    this.navCtrl.push(SignupPage);
   }
 }
 
